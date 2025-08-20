@@ -34,6 +34,26 @@ This extension solves a common problem: Cursor IDE and other VS Code-based edito
 
 ## WSL Setup
 
+### Activate WSL Interop (Required for Linux/WSL2)
+
+**Important**: For this extension to work properly on WSL2, you need to activate Windows Subsystem for Linux interoperability. This allows WSL to launch Windows applications like File Explorer.
+
+```bash
+# In your WSL2 terminal, run this command to check if interop is enabled:
+ls /mnt/c
+
+# If you get "Permission denied" or similar errors, interop is disabled
+# To enable it, add this to your WSL configuration file:
+echo '[interop]' | sudo tee -a /etc/wsl.conf
+echo 'enabled = true' | sudo tee -a /etc/wsl.conf
+echo 'appendWindowsPath = true' | sudo tee -a /etc/wsl.conf
+
+# Then restart WSL from Windows PowerShell (as Administrator):
+# wsl --shutdown
+# wsl
+```
+
+### Configure Drive Letter Mapping
 
 For WSL users, you need to configure the extension to know which Windows drive letter your WSL filesystem is mounted to:
 
