@@ -2,7 +2,7 @@
     "name": "cursor-reveal-explorer",
     "displayName": "Cursor Reveal in Explorer",
     "description": "Adds a 'Reveal in Explorer' button for Cursor IDE to open files in Windows File Explorer",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.74.0"
