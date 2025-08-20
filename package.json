@@ -86,10 +86,10 @@
         "typescript": "^4.9.4",
         "yo": "^5.1.0"
     },
-    "publisher": "cursor-tools",
+    "publisher": "erickluis",
     "repository": {
         "type": "git",
-        "url": "https://github.com/cursor-tools/cursor-reveal-explorer"
+        "url": "https://github.com/ErickLuis00/cursor-reveal-explorer-wsl"
     },
     "license": "MIT"
 }
