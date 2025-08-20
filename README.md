@@ -2,6 +2,8 @@
 
 A VS Code extension that adds a "Reveal in Explorer" button for remote connections (like WSL) in Cursor IDE and other VS Code-based editors. Cursor IDE doesn't include this button when using remote connections, so this extension fills that gap. Perfect for WSL users who need to quickly open files in Windows File Explorer.
 
+<img width="421" height="117" alt="image" src="https://github.com/user-attachments/assets/e8a56a16-23b0-44eb-9b25-b51c625fcb4e" />
+
 
 
 ## What This Extension Does
@@ -32,7 +34,12 @@ This extension solves a common problem: Cursor IDE and other VS Code-based edito
 
 ## WSL Setup
 
+
 For WSL users, you need to configure the extension to know which Windows drive letter your WSL filesystem is mounted to:
+
+
+<img width="885" height="709" alt="image" src="https://github.com/user-attachments/assets/fc24548b-ab2f-4f0c-9184-550f3ca7bf09" />
+<img width="289" height="106" alt="image" src="https://github.com/user-attachments/assets/653292cd-dba6-46e4-bfa3-1c984a942245" />
 
 1. **Default setting**: The extension uses `Z:` as the default mount drive
 2. **To change this**: 
