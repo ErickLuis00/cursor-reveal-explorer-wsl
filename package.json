@@ -1,0 +1,94 @@
+{
+    "name": "cursor-reveal-explorer",
+    "displayName": "Cursor Reveal in Explorer",
+    "description": "Adds a 'Reveal in Explorer' button for Cursor IDE to open files in Windows File Explorer",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "cursor",
+        "explorer",
+        "reveal",
+        "file manager",
+        "windows"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "cursorRevealExplorer.revealInExplorer",
+                "title": "Reveal in Explorer",
+                "icon": "$(folder-opened)"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "cursorRevealExplorer.revealInExplorer",
+                    "group": "navigation"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "cursorRevealExplorer.revealInExplorer",
+                    "when": "editorTextFocus",
+                    "group": "navigation"
+                }
+            ],
+            "editor/title/context": [
+                {
+                    "command": "cursorRevealExplorer.revealInExplorer",
+                    "group": "navigation"
+                }
+            ],
+            "editor/title": [
+                {
+                    "command": "cursorRevealExplorer.revealInExplorer",
+                    "when": "resourceScheme == file",
+                    "group": "navigation"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "cursorRevealExplorer.revealInExplorer"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "Cursor Reveal Explorer",
+            "properties": {
+                "cursorRevealExplorer.wslMountDrive": {
+                    "type": "string",
+                    "default": "Z:",
+                    "description": "The Windows drive letter where WSL is mounted (e.g., 'Z:', 'Y:', 'W:'). This is required for WSL environments.",
+                    "pattern": "^[A-Za-z]:?$"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "16.x",
+        "@types/vscode": "^1.74.0",
+        "generator-code": "^1.11.11",
+        "typescript": "^4.9.4",
+        "yo": "^5.1.0"
+    },
+    "publisher": "cursor-tools",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cursor-tools/cursor-reveal-explorer"
+    },
+    "license": "MIT"
+}
